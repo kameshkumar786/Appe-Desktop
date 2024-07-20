@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+if you wants to add all components in one command run this command
+
+npx shadcn-ui@latest add alert accordion alert dialog aspect ratio avatar badge breadcrumb button calendar card carousel chart new checkbox collapsible combobox command context menu data table date picker dialog drawer dropdown menu form hover card input input otp label menubar navigation menu pagination popover progress radio group resizable scroll area select separator sheet skeleton slider sonner switch table tabs textarea toast toggle toggle group tooltip
+
 First, run the development server:
 
 ```bash

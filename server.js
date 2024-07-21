@@ -17,6 +17,40 @@ db.serialize(() => {
 
 });
 
+
+app.post('/api/create-table', (req, res) => {
+  const { tableName, data } = req.body;
+  const fields = Object.keys(data);
+
+  db.serialize(() => {
+    db.run(`CREATE TABLE IF NOT EXISTS ${tableName} (id INTEGER PRIMARY KEY AUTOINCREMENT)`, (err) => {
+      if (err) {
+        res.status(500).send(err.message);
+        return;
+      }
+
+      const fieldDefs = fields.map((field) => `${field} TEXT`);
+      db.run(`ALTER TABLE ${tableName} ADD COLUMN ${fieldDefs.join(', ')}`, (err) => {
+        if (err) {
+          res.status(500).send(err.message);
+          return;
+        }
+
+        const placeholders = fields.map((field) => `?`);
+        const values = fields.map((field) => data[field]);
+        db.run(`INSERT INTO ${tableName} (${fields.join(', ')}) VALUES (${placeholders.join(', ')})`, values, (err) => {
+          if (err) {
+            res.status(500).send(err.message);
+            return;
+          }
+
+          res.status(201).json({ message: `Table ${tableName} created and record inserted` });
+        });
+      });
+    });
+  });
+});
+
 app.get('/api/items', (req, res) => {
   db.all('SELECT * FROM items', [], (err, rows) => {
     if (err) {

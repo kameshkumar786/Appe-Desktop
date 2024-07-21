@@ -71,304 +71,77 @@ const data = [
     status: "failed",
     email: "carmella@hotmail.com",
   },
-  {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },
-  {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },
-  {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },{
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-  },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },
 ]
 
+// const generateColumns = (data) => {
+//   const keys = Object.keys(data[0]);
+//   return keys.map((key) => ({
+//     accessorKey: key,
+//     header: key.charAt(0).toUpperCase() + key.slice(1),
+//     cell: ({ row }) => {
+//       if (key === "amount") {
+//         const amount = parseFloat(row.getValue(key));
+//         const formatted = new Intl.NumberFormat("en-US", {
+//           style: "currency",
+//           currency: "INR",
+//         }).format(amount);
+//         return <div className="text-right font-medium">{formatted}</div>;
+//       }
+//       if (key === "status") {
+//         return <div className="capitalize">{row.getValue(key)}</div>;
+//       }
+//       if (key === "email") {
+//         return <div className="lowercase">{row.getValue(key)}</div>;
+//       }
+//       return <div>{row.getValue(key)}</div>;
+//     },
+//   }));
+// }
 
 
-export const columns = [
+const generateColumns = (data) => {
+  const keys = Object.keys(data[0]);
+  return keys.map((key) => {
+    const sampleValue = data[0][key];
+    let cellRenderer;
+
+    switch (typeof sampleValue) {
+      case "number":
+        cellRenderer = ({ row }) => {
+          const amount = parseFloat(row.getValue(key));
+          const formatted = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "INR",
+          }).format(amount);
+          return <div className="text-right font-medium">{formatted}</div>;
+        };
+        break;
+      case "string":
+        if (key === "email") {
+          cellRenderer = ({ row }) => (
+            <div className="lowercase">{row.getValue(key)}</div>
+          );
+        } else {
+          cellRenderer = ({ row }) => (
+            <div className="capitalize">{row.getValue(key)}</div>
+          );
+        }
+        break;
+      default:
+        cellRenderer = ({ row }) => <div>{row.getValue(key)}</div>;
+    }
+
+    return {
+      accessorKey: key,
+      header: key.charAt(0).toUpperCase() + key.slice(1),
+      cell: cellRenderer,
+      filterFn: "includesString",
+    };
+  });
+};
+
+
+const columns = [
   {
     id: "select",
     header: ({ table }) => (
@@ -392,42 +165,13 @@ export const columns = [
     enableHiding: false,
   },
   {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
+    id: "index",
+    header: "No.",
+    cell: ({ row }) => row.index + 1,
+    enableSorting: false,
+    enableHiding: false,
   },
-  {
-    accessorKey: "email",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <CaretSortIcon className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-  },
-  {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "INR",
-      }).format(amount)
-
-      return <div className="text-right font-medium">{formatted}</div>
-    },
-  },
+  ...generateColumns(data),
   {
     id: "actions",
     enableHiding: false,
@@ -485,37 +229,17 @@ export default function DataTableDemo() {
     },
   })
 
-  // const handleRowSelect = (row) => {
-  //   console.log(row);
-  //   let selectedRows =selectedRow;
-  //   let removed = false;
-  //   for (let i = 0; i < selectedRows.length; i++) {
-  //     if (selectedRows[i].id === row.id) {
-  //       selectedRows.splice(i, 1);
-  //       removed = true;
-  //       break;
-  //     }
-  //   }
-  //   if (!removed) {
-  //     selectedRows.push(row);
-  //   }
-  //   setSelectedRow(selectedRows)
-  // };
-
-
-
-
   return (
     <div className="w-full">
       <div className="flex items-center  m-1">
-        <Input
+        {/* <Input
           placeholder="Filter emails..."
           value={(table.getColumn("email")?.getFilterValue()) ?? ""}
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
-        />
+        /> */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
@@ -575,13 +299,68 @@ export default function DataTableDemo() {
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
+
+
                     <TableHead key={header.id} className="text-black">
                       {header.isPlaceholder
                         ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                        : (
+                          <>
+                             <div
+                              {...{
+                                onClick: header.column.getToggleSortingHandler(),
+                                className: header.column.getCanSort()
+                                  ? 'cursor-pointer select-none flex items-center'
+                                  : '',
+                              }}
+                            >
+                              {flexRender(
+                                header.column.columnDef.header,
+                                header.getContext()
+                              )}
+                              {header.column.getIsSorted() ? (
+                                header.column.getIsSorted() === 'desc' ? (
+                                  <CaretSortIcon className="ml-2" />
+                                ) : (
+                                  <CaretSortIcon className="ml-2" />
+                                )
+                              ) : (
+                                header.column.getCanSort() && (
+                                  <CaretSortIcon className="ml-2" />
+                                )
+                              )}
+                            </div>
+                           
+                          </>
+                        )}
+                    </TableHead>
+                  )
+                })}
+              </TableRow>
+            ))}
+
+{table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id} className="bg-white">
+                {headerGroup.headers.map((header) => {
+                  return (
+                    <TableHead key={header.id} className="">
+                      {header.isPlaceholder
+                        ? null
+                        : (
+                          <>
+                            {header.column.id !== "select" && header.column.id !== "index" && header.column.id !== "actions" && header.column.columnDef.header !== " " && (
+                              <Input 
+                              style={{height:30}}
+                                value={(header.column.getFilterValue() ?? "")}
+                                onChange={(event) =>
+                                  header.column.setFilterValue(event.target.value)
+                                }
+                                placeholder={`Search ${header.column.columnDef.header}`}
+                                className="mt-1 text-xs"
+                              />
+                            )}
+                          </>
+                        )}
                     </TableHead>
                   )
                 })}
@@ -637,7 +416,7 @@ export default function DataTableDemo() {
       Page {table.getState().pagination.pageIndex + 1} of{" "}
       {table.getPageCount()}
     </span>
-    <Button
+     <Button
       variant="outline"
       size="sm"
       onClick={() => table.nextPage()}
@@ -653,8 +432,8 @@ export default function DataTableDemo() {
       disabled={!table.getCanNextPage()}
     >
       Last
-    </Button>
-  </div>
+    </Button> 
+     </div>
 </div>
     </div>
   )

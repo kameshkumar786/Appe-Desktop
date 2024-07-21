@@ -38,17 +38,18 @@ import { PersonIcon } from "@radix-ui/react-icons"
 
 export default function RootLayout({children}) {
 
+  const [activemenu, setactivemenu] = React.useState('dashboard')
 
     console.log('children',children)
   return (
    
-    <div className="grid min-h-screen w-full md:grid-cols-[150px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-muted/40 md:block">
+    <div className="grid min-h-screen w-full md:grid-cols-[250px_1fr] lg:grid-cols-[250px_1fr]">
+      <div className="hidden border-r bg-white   md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
               <Package2 className="h-6 w-6" />
-              <span className="">Acme Inc</span>
+              <span className="">Bhart E-com</span>
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
               <Bell className="h-4 w-4" />
@@ -56,17 +57,21 @@ export default function RootLayout({children}) {
             </Button>
           </div>
           <div className="flex-1">
-            <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+            <nav className="grid items-start px-2 text-sm font-medium lg:px-4" style={{fontSize:13}}>
               <Link
+              onClick={()=>{setactivemenu('dashboard')}}
                 href="./dashboard"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='dashboard' ? 'bg-slate-300 text-primary' : ''}`}
+
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
+                            onClick={()=>{setactivemenu('orders')}}
+
                 href="./orders"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='orders' ? 'bg-slate-300 text-primary' : ''}`}
               >
                 <ShoppingCart className="h-4 w-4" />
                 Orders
@@ -75,32 +80,38 @@ export default function RootLayout({children}) {
                 </Badge>
               </Link>
               <Link
+                onClick={()=>{setactivemenu('stock')}}
                 href="./stock"
-                className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='stock' ? 'bg-slate-300 text-primary' : ''}`}
               >
                 <Package className="h-4 w-4" />
                 Stock{" "}
               </Link>
               <Link
-                href="./Customer"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                onClick={()=>{setactivemenu('customer')}}
+
+                href="./customer"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='customer' ? 'bg-slate-300 text-primary' : ''}`}
               >
                 <Users className="h-4 w-4" />
                 Customers
               </Link>
               <Link
-                href="./Supplier"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                onClick={()=>{setactivemenu('supplier')}}
+                href="./supplier"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='supplier' ? 'bg-slate-300 text-primary' : ''}`}
               >
                 <PersonIcon className="h-4 w-4" />
                 Supplier
               </Link>
               <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                onClick={()=>{setactivemenu('reports')}}
+
+                href="report"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${activemenu=='reports' ? 'bg-slate-300 text-primary' : ''}`}
               >
                 <LineChart className="h-4 w-4" />
-                Analytics
+                Report
               </Link>
             </nav>
           </div>
@@ -108,7 +119,7 @@ export default function RootLayout({children}) {
             <Card x-chunk="dashboard-02-chunk-0">
               <CardHeader className="p-2 pt-0 md:p-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>
+                <CardDescription  className="text-xs">
                   Unlock all features and get unlimited access to our support
                   team.
                 </CardDescription>
@@ -142,7 +153,7 @@ export default function RootLayout({children}) {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Acme Inc</span>
+                  <span className="sr-only">Bhart Ecom</span>
                 </Link>
                 <Link
                   href="#"

@@ -35,10 +35,31 @@ import {
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { PersonIcon } from "@radix-ui/react-icons"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+import serveces from "./services/serveces"
+
 
 export default function RootLayout({children}) {
 
   const [activemenu, setactivemenu] = React.useState('dashboard')
+
+  const getallData=()=>{
+    serveces.AllServices().then(r=>{
+      console.log(r)
+    }).catch(e=>{
+      console.log(e)
+    })
+  }
 
     console.log('children',children)
   return (
@@ -116,7 +137,7 @@ export default function RootLayout({children}) {
             </nav>
           </div>
           <div className="mt-auto p-4">
-            <Card x-chunk="dashboard-02-chunk-0">
+            {/* <Card x-chunk="dashboard-02-chunk-0">
               <CardHeader className="p-2 pt-0 md:p-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
                 <CardDescription  className="text-xs">
@@ -129,7 +150,49 @@ export default function RootLayout({children}) {
                   Upgrade
                 </Button>
               </CardContent>
+            </Card> */}
+
+
+
+            <Card x-chunk="dashboard-02-chunk-0">
+              <CardHeader className="p-2 pt-0 md:p-4">
+                <CardTitle>Refresh Tally Data</CardTitle>
+                <CardDescription  className="text-xs">
+                  Refresh Data from tally.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
+
+
+                <AlertDialog>
+                  <AlertDialogTrigger>
+                    <Button size="sm" className="w-full" >
+                      Refresh Data
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                      <AlertDialogDescription>
+                       You wants to delete all data from tally.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                      <AlertDialogAction onClick={()=>{getallData()}} >Continue</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              </CardContent>
             </Card>
+
+
+
+            
+
+
+
+
           </div>
         </div>
       </div>
@@ -195,7 +258,7 @@ export default function RootLayout({children}) {
                 </Link>
               </nav>
               <div className="mt-auto">
-                <Card>
+                {/* <Card>
                   <CardHeader>
                     <CardTitle>Upgrade to Pro</CardTitle>
                     <CardDescription>
@@ -206,6 +269,22 @@ export default function RootLayout({children}) {
                   <CardContent>
                     <Button size="sm" className="w-full">
                       Upgrade
+                    </Button>
+                  </CardContent>
+                </Card> */}
+
+
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Delete All Data</CardTitle>
+                    <CardDescription>
+                      Delete all data in local and resync from tally
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button size="sm" className="w-full">
+                      Refresh Data
                     </Button>
                   </CardContent>
                 </Card>

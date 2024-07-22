@@ -1,8 +1,5 @@
 import React from 'react'
 import convert from 'xml-js';
-import db from '../database/db.json'
-
-
 
 function Services() {
     return (
@@ -10,25 +7,22 @@ function Services() {
     )
 }
 const baseURL = "http://localhost:9000"
-const jsonbaseURL = "http://localhost:3000"
+const jsonbaseURL = "http://localhost:5000"
 
-const store_data_json_server = (name, data) => {
-
-    // data.forEach(a => {
-    //   const requestOptions = {
-    //     method: "POST",
-    //     redirect: "follow",
-    //     body:JSON.stringify(a)
-    //   };
-
-    //   fetch(`${jsonbaseURL}/${name}`, requestOptions)
-    //     .then((response) => response.text())
-    //     .then((result) => console.log(result))
-    //     .catch((error) => console.error(error));
-
-    // });
-
-}
+const store_data_json_server = (tableName, data) => {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    };
+  
+    fetch(`http://localhost:5000/api/store-data/${tableName}`, requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.error('Error storing data:', error));
+  };
 
 const cleanData = (data) => {
     return data.map(item => {
@@ -150,6 +144,7 @@ const get_listof_companys = async () => {
         let cleaneddata = myjson.ENVELOPE.BODY.DATA.COLLECTION
         localStorage.setItem('companylist', JSON.stringify(cleaneddata))
         let company = localStorage.getItem('companylist')
+        store_data_json_server('companylist',cleaneddata)
         //   console.log(companylist)
 
     } catch (error) {
@@ -264,6 +259,9 @@ const get_groups_list = async () => {
         localStorage.setItem('groups', JSON.stringify(cleanedData))
         let groups = localStorage.getItem('groups')
         //   console.log(groups)
+
+        store_data_json_server('groups',cleanedData)
+
         return cleanedData
 
     } catch (error) {
@@ -298,6 +296,8 @@ const get_stock_groups_list = async () => {
         localStorage.setItem('stockgroups', JSON.stringify(cleanedData))
         let stock = localStorage.getItem('stockgroups')
         //   console.log(groups)
+        store_data_json_server('stockgroups',cleanedData)
+
         return cleanedData
 
     } catch (error) {
@@ -365,6 +365,9 @@ const get_sales_report = async () => {
         // console.log('stockgroups cleandata',cleanedData)
         AsyncStorage.setItem('sales_report', JSON.stringify(cleanedData))
         let stock = AsyncStorage.getItem('sales_report')
+
+        store_data_json_server('sales_report',cleanedData)
+
         //   console.log(groups)
         return cleanedData
 
@@ -372,7 +375,6 @@ const get_sales_report = async () => {
         console.error('Error fetching XML data:', error);
     }
 }
-
 
 const get_all_report_list = async () => {
     try {
@@ -401,6 +403,8 @@ const get_all_report_list = async () => {
         localStorage.setItem('report_list', JSON.stringify(cleanedData))
         // let stock = AsyncStorage.getItem('stockgroups')
         //   console.log(groups)
+        store_data_json_server('report',cleanedData)
+
         return cleanedData
 
     } catch (error) {
@@ -425,15 +429,15 @@ const AllServices = async () => {
         if (result) {
             console.log('XML data', result)
 
-            get_listof_companys()
-            get_current_company()
+            // get_listof_companys()
+            // get_current_company()
             get_stock_items()
-            get_ledgers_list()
-            get_groups_list()
-            get_stock_groups_list()
-            get_all_report_list()
-            get_sales_report()
-            get_vouchers_list()
+            // get_ledgers_list()
+            // get_groups_list()
+            // get_stock_groups_list()
+            // get_all_report_list()
+            // get_sales_report()
+            // get_vouchers_list()
             
 
             return true

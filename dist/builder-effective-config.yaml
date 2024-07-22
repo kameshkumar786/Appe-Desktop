@@ -1,0 +1,13 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.example.app
+files:
+  - filter:
+      - next.config.js
+      - main.js
+      - preload.js
+      - public/**/*
+      - .next/**/*
+      - node_modules/**/*
+electronVersion: 31.2.1

@@ -5,7 +5,6 @@
   "main": "main.js",
   "author": "Jane Doe",
   "license": "MIT",
-
   "private": true,
   "build": {
     "appId": "com.example.app",
@@ -29,8 +28,6 @@
     "electron": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
     "dist": "next build && electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
-
-
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -64,6 +61,7 @@
     "cmdk": "^1.0.0",
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
+    "electron-serve": "^2.0.0",
     "embla-carousel-react": "^8.1.6",
     "express": "^4.19.2",
     "lucide-react": "^0.403.0",

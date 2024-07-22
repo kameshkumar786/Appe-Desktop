@@ -8,11 +8,22 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      contextIsolation: false,
+      contextIsolation: true,
     },
+
   });
 
   win.loadURL('http://localhost:3000');
+  win.setMenu(null); // Hide the menubar
+
+
+  win.webContents.on('did-create-window', (window) => {
+    window.setWindowResourceObject('csp', {
+      policy: "default-src 'elf'; script-src 'elf'; style-src 'elf'; img-src 'elf';",
+    });
+  });
+
+
 }
 
 app.whenReady().then(() => {

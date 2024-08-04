@@ -46,7 +46,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import serveces from "./services/serveces"
+import services from "./services/services"
 
 
 export default function RootLayout({children}) {
@@ -54,7 +54,7 @@ export default function RootLayout({children}) {
   const [activemenu, setactivemenu] = React.useState('dashboard')
 
   const getallData=()=>{
-    serveces.AllServices().then(r=>{
+    services.AllServices().then(r=>{
       console.log(r)
     }).catch(e=>{
       console.log(e)

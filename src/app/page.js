@@ -9,6 +9,7 @@ export default function Home() {
       <Link href='/login'>
       <div className="text-2xl bg-slate-200 p-5">Login Page</div>
       </Link>
+      
 
     </main>
   );

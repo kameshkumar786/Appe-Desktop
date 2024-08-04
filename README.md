@@ -10,6 +10,14 @@ First, run the development server:
 
 ```bash
 npm run dev
+# of run only sqlite3 server
+npm server.js
+# run app with server
+npm run dev:server
+# run only electron app
+npm run electron
+# ron electron app with server
+npm run electron:server
 # or
 yarn dev
 # or

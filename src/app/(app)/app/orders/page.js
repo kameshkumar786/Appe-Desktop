@@ -8,8 +8,27 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useEffect, useState } from "react"
+import services from "../services/services"
 
 export default function Orders() {
+
+  const [datalist, setdatalist] = useState([])
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const getData =async()=>{
+    let req ={
+      table:'stockitems',
+    }
+    await services.get_data_from_table(req).then(r=>{
+      console.log('response',r)
+    }).catch(e=>{
+      console.log('error on api',e)
+    })
+  }
+  
 
   return (
 

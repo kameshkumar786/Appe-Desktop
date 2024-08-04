@@ -1,3 +1,4 @@
+import { Alert } from '@/components/ui/alert';
 import React from 'react'
 import convert from 'xml-js';
 
@@ -10,19 +11,50 @@ const baseURL = "http://localhost:9000"
 const jsonbaseURL = "http://localhost:5000"
 
 const store_data_json_server = (tableName, data) => {
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    };
+    const chunkSize = 10;
+    const chunks = [];
   
-    fetch(`http://localhost:5000/api/store-data/${tableName}`, requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.error('Error storing data:', error));
+    for (let i = 0; i < data.length; i += chunkSize) {
+      chunks.push(data.slice(i, i + chunkSize));
+    }
+  
+    chunks.forEach((chunk) => {
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(chunk)
+      };
+  
+      fetch(`http://localhost:5000/api/store-data/${tableName}`, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.error('Error storing data:', error));
+    });
   };
+
+
+  const get_data_from_table = async(req) => {
+      const requestOptions = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        },
+      };
+  
+      const result = await fetch(`${jsonbaseURL}/api/fetch-data/${req.table}?fields=*&filters=${JSON.stringify(req.filters)}`, requestOptions)
+      .then(response => response.json())
+      .catch(error => {
+        console.error('Error storing data:', error)
+        return error
+      });
+    
+    return result;
+    
+  };
+
+
 
 const cleanData = (data) => {
     return data.map(item => {
@@ -432,21 +464,22 @@ const AllServices = async () => {
             // get_listof_companys()
             // get_current_company()
             get_stock_items()
-            // get_ledgers_list()
-            // get_groups_list()
-            // get_stock_groups_list()
-            // get_all_report_list()
+            get_ledgers_list()
+            get_groups_list()
+            get_stock_groups_list()
+            get_all_report_list()
             // get_sales_report()
-            // get_vouchers_list()
+            get_vouchers_list()
             
 
             return true
         } else {
-            return false
+            return 11111
         }
     } catch (error) {
         console.error('Error fetching XML data:', error);
-        return false
+        alert('Tally is not runnig please check')
+        return 222
     }
 
 }
@@ -500,4 +533,4 @@ const CallTallyReport = async (report_name, company, from_date, to_date) => {
 }
 
 
-export default { Services,AllServices, get_all_report_list, get_vouchers_list, check_tally_server, get_listof_companys, get_current_company, get_stock_items, get_ledgers_list, get_groups_list, get_stock_groups_list }
+export default { Services, get_data_from_table, AllServices, get_all_report_list, get_vouchers_list, check_tally_server, get_listof_companys, get_current_company, get_stock_items, get_ledgers_list, get_groups_list, get_stock_groups_list }
